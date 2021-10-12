@@ -1,0 +1,59 @@
+.navbar {
+    width: 100%;
+    background-color: #fff;
+    height: 50px;
+    box-shadow: 0 0px 5px rgba($color: #000000, $alpha: 0.1);
+    &__wrapper{
+        margin: 0 auto;
+        width: 1040px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            cursor: pointer;
+            text-decoration: none;
+            color: #000;
+            &:not(:last-of-type){
+                margin-right: 15px;
+            }
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    &__logo {
+        text-decoration: none !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar{
+        &__wrapper{
+            width: 960px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .navbar{
+        &__wrapper{
+            width: 720px;
+        }
+    }
+}
+@media (max-width: 760px) {
+    .navbar{
+        &__wrapper{
+            width: 540px;
+        }
+    }
+}
+@media (max-width: 580px) {
+    .navbar{
+        &__wrapper{
+            width: 100%;
+            padding: 0 15px;
+        }
+    }
+}

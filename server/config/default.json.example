@@ -1,0 +1,6 @@
+{
+    "PORT": 0,
+    "DBUri": "",
+    "jwtSecretKey": "",
+    "filePath": ""
+}

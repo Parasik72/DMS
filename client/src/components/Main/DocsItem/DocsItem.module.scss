@@ -1,0 +1,23 @@
+$mainColor: #0066ff;
+$secondColor: #cacaca;
+
+.mainItem {
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba($color: #000000, $alpha: 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, 
+                transform 0.2s,
+                color 0.2s ease-in-out;
+    padding: 20px;
+    &:hover {
+        transform: translateY(-5px);
+        background-color: $mainColor;
+        color: #fff;
+    }
+}

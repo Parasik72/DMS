@@ -1,0 +1,54 @@
+$mainColor: #0066ff;
+$secondColor: #cacaca;
+
+.mainItem {
+    cursor: pointer;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.2fr 0.7fr 0.7fr;
+    grid-template-areas: "title type space owner uploadedBy";
+    padding: 10px;
+    border: 1px solid $secondColor;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    &__title,
+    &__type,
+    &__owner,
+    &__uploadedBy{
+        display: flex;
+    }
+    &__title{
+        grid-area: title;
+    }
+    &__type{
+        grid-area: type;
+    }
+    &__owner{
+        grid-area: owner;
+    }
+    &__uploadedBy{
+        grid-area: uploadedBy;
+    }
+    &:not(:first-of-type){
+        margin-top: 10px;
+    }
+    h3,
+    span {
+        font-size: 18px;
+    }
+    span {
+        margin-left: 5px;
+    }
+    &:hover {
+        background-color: $mainColor;
+        color: #fff;
+    }
+}
+
+@media (max-width: 760px) {
+    .mainItem{
+      display: block;
+    }
+  }
+
+  

@@ -1,0 +1,140 @@
+$mainColor: #0066ff;
+$secondColor: #cacaca;
+
+.mainEditDocs{
+    width: 1040px;
+    animation: showMain2 0.2s ease-in-out;
+}
+
+.mainEdit {
+    animation: showMain 0.2s ease-in-out;
+    &__item{
+        &:not(:first-of-type) {
+            margin-top: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid $secondColor;
+            &:focus {
+                outline: none;
+                border: 1px solid $mainColor;
+            }
+        }
+        button{
+            margin-right: 15px;
+            padding: 4px 12px;
+            font-size: 18px;
+            background-color: $secondColor;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            cursor: pointer;
+            &:hover{
+                background-color: $mainColor;
+                color: #fff;
+            }
+        }
+    }
+    &__header {
+        cursor: pointer;
+        padding: 20px;
+        margin-top: 20px;
+        background-color: $mainColor;
+        color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba($color: #000000, $alpha: 0.1);
+        text-align: center;
+        transition:  transform 0.2s;
+        h5{
+            color: #000;
+        }
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+    &__body {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 30px;
+        box-shadow: 0 5px 15px rgba($color: #000000, $alpha: 0.1);
+        padding: 20px;
+    }
+    &__users{
+        margin-top: 5px;
+        border: 1px solid $secondColor;
+        min-height: 40px;
+    }
+    &__user {
+        cursor: pointer;
+        padding: 10px;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        &:not(:last-of-type){
+            border-bottom: 1px solid $secondColor;
+        }
+        span,
+        h3 {
+            font-size: 18px;
+        }
+        span {
+            margin-left: 5px;
+        }
+        &:hover {
+            background-color: $mainColor;
+            color: #fff;
+        }
+    }
+    &__loader{
+        display: flex;
+        align-items: center;
+        height: calc(100vh - 250px);
+    }
+}
+
+@keyframes showMain {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes showMain2 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .mainEditDocs{
+      width: 960px;
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .mainEditDocs{
+      width: 720px;
+    }
+  }
+  @media (max-width: 760px) {
+    .mainEditDocs{
+      width: 540px;
+    }
+  }
+
+@media (max-width: 580px) {
+    .mainEditDocs{
+      width: 100%;
+      padding: 0 15px;
+      word-break: break-all;
+    }
+  }
