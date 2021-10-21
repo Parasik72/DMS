@@ -64,7 +64,7 @@ export const UploadDocs = () => {
         let temp = document.body.getElementsByClassName(styles.typeActive);
         if(temp.length)
             temp[0].classList.remove(styles.typeActive);
-        document.getElementById(id).classList.add(styles.typeActive);
+        document.getElementById(id)?.classList.add(styles.typeActive);
     }
     return (
         <>
@@ -81,10 +81,10 @@ export const UploadDocs = () => {
                     <div className={styles.mainUpload__item}>
                         <h2>Type:</h2>
                         <div id={styles.Operative} className={styles.mainUpload__type} onClick={(e) => typeHandle('Operative', e.target.id)}> 
-                            <span>Operative</span>
+                            <span onClick={(e) => e.stopPropagation()}>Operative</span>
                         </div>
                         <div id={styles.Reference} className={styles.mainUpload__type} onClick={e => typeHandle('Reference', e.target.id)}> 
-                            <span>Reference</span>
+                            <span onClick={(e) =>(e) => e.stopPropagation()}>Reference</span>
                         </div>
                     </div>
                     <div className={styles.mainUpload__item}>
